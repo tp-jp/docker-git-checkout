@@ -27,5 +27,5 @@ jobs:
           docker run --rm \
             -e PAT_TOKEN=${{ secrets.PAT_TOKEN }} \
             -e USER_NAME=${{ github.actor }} \
-            -e REPOSITORY_NAME=env.REPOSITORY_NAME \
-            env.REPOSITORY_NAME
+            -e REPOSITORY_NAME=${{ env.REPOSITORY_NAME }} \
+            ${{ env.REPOSITORY_NAME }}
