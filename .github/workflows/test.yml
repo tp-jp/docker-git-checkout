@@ -19,11 +19,10 @@ jobs:
 
       - name: Build Docker image
         run: |
-          docker build -t cron-container .
+          docker build -t ${{ env.REPOSITORY_NAME }} .
 
       - name: Test Docker image
         run: |
-          echo $REPOSITORY_NAME
           docker run --rm \
             -e PAT_TOKEN=${{ secrets.PAT_TOKEN }} \
             -e USER_NAME=${{ github.actor }} \
