@@ -24,6 +24,7 @@ jobs:
 
       - name: Test Docker image
         run: |
+          echo $REPOSITORY_NAME
           docker run --rm \
             -e PAT_TOKEN=${{ secrets.PAT_TOKEN }} \
             -e USER_NAME=${{ github.actor }} \
