@@ -27,6 +27,10 @@ docker run \
 | `REPOSITORY_NAME` | クローンしたい GitHub リポジトリの名前。                                                    |
 | `CLONE_DIR`       | クローン先のディレクトリ。                                                                  |
 
+## マウントするディレクトリ
+
+- `/workspace`: クローンしたリポジトリを配置するディレクトリ。ホストのリポジトリディレクトリをマウントしてください。
+
 ## 注意点
 
 - この Docker イメージは GitHub のプライベートリポジトリにアクセスするために、Personal Access Token（PAT）を必要とします。
